@@ -7,4 +7,4 @@ You can set the time rules based on your preferences (e.g 4/30).
 ## Stack technology used:
 * HTML & CSS + React JS
 
-> [Link](https://anassasp.github.io/25-5-Clock/) to web preview
+> [Link to web preview](https://anassasp.github.io/25-5-Clock/)
