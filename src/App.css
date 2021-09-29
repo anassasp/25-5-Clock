@@ -1,38 +1,150 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre&family=Noto+Sans+Display&display=swap');
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans Display', sans-serif;
+}
+
+h1, h2 {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button {
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.title {
+  font-size: 2em;
+}
+
+.subtitle {
+  font-size: 1.25em;
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+
+.content-wrapper {
+  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #eee;
+  width: 40%;
+  padding: 20px;
+  border-radius: 5px;
+  border: 5px solid #bbb;
+}
+
+.opt-wrapper {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 80px;
+}
+
+.option-content {
+  font-size: 1em;
+  width: 25%;
+  background-color: #ddd;
+  text-align: center;
+  padding: 5px;
+  border: 2px solid #bbb;
+}
+
+.opt-wrapper .option-content .option-title {
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+}
+
+.opt-wrapper .option-content .btnOpt-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.opt-wrapper .option-content .btnOpt {
+  width: 25%;
+}
+
+.opt-wrapper .option-content .opt-timer {
+  font-size: 1.15em;
+  width: 25%;
+}
+
+.timer-container {
+  width: 75%;
+  text-align: center;
+  padding: 40px;
+  margin: 20px auto;
+  background-color: #444;
+  color: #fff;
+  border: 5px solid #000;
+  border-radius: 5px;
+  letter-spacing: 1px;
+}
+
+.session-title {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  text-decoration: underline;
+  text-decoration-color: red;
+}
+
+.timer-container .time-counter {
+  font-size: 3rem;
+  font-family: 'Gemunu Libre', sans-serif;
+}
+
+.player-container {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 75%;
 }
 
-.App-link {
-  color: #61dafb;
+.player-container .btn-player {
+  padding: 5px 0;
+  width: 70px;
+  font-size: 0.85em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 1024px) {
+  .content-wrapper {
+    width: 50%;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 690px) {
+  .content-wrapper {
+    width: 70%;
+  }
+}
+
+@media (max-width: 500px) {
+  .content-wrapper {
+    width: 90%;
+  }
+  .opt-wrapper{
+    justify-content: space-evenly;
+  }
+  .option-content{
+    width: 35%;
+  }
+  .opt-wrapper .option-content .option-title {
+    font-size: 1.25em;
+  }
+  .opt-wrapper .option-content .opt-timer {
+    font-size: 1em;
   }
 }
